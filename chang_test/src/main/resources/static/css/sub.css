@@ -1,0 +1,2044 @@
+/* radio버튼 공통 */
+.order_item_end_index input[type="radio"] {
+  vertical-align: middle;
+  appearance: none;
+  border: max(2px, 0.1em) solid gray;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  margin-right: 0.8rem;
+}
+
+.order_item_end_index input[type="radio"]:checked {
+  border: 0.4em solid tomato;
+}
+
+.order_item_end_index input[type="radio"]:focus-visible {
+  outline: max(2px, 0.1em) dotted tomato;
+}
+
+.order_item_end_index input[type="radio"]:hover {
+  box-shadow: 0 0 0 max(4px, 0.2em) lightgray;
+  cursor: pointer;
+}
+
+.order_item_end_index input[type="radio"]:hover + span {
+  cursor: pointer;
+}
+
+.order_item_end_index input[type="radio"]:disabled {
+  background-color: lightgray;
+  box-shadow: none;
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.order_item_end_index input[type="radio"]:disabled + span {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* sub - orderlist */
+
+.board_pad {
+  width: 100%;
+}
+
+.title {
+  display: flex;
+  align-items: end;
+  gap: 1.5rem;
+}
+
+.orderlist_list_wrap {
+  margin-bottom: 2.6rem;
+}
+
+.title p:nth-of-type(2) {
+  font-size: 1.2rem;
+}
+
+.btn {
+  background-color: #46698f;
+  font-size: 1.6rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.4rem;
+  color: #fff;
+  font-weight: 600;
+}
+
+.border {
+  border-right: 1px solid #dfdfdf;
+  border-bottom: 1px solid #dfdfdf;
+  background-color: #ffffff;
+}
+
+.title_wrap {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 1.6rem;
+}
+
+.title_wrap.date {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 1.6rem;
+}
+
+.orderlist_btn_wrap {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.orderlist_first_line {
+  display: flex;
+  width: 100%;
+}
+
+.orderlist_item {
+  width: 25%;
+  display: flex;
+}
+
+.order_title {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+}
+
+.order_index {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.4rem;
+  gap: 0.4rem;
+}
+
+.order_item_com {
+  max-width: 6rem;
+  min-width: 4rem;
+  border-radius: 8px 0 0 0;
+}
+
+.order_item_od_title {
+  max-width: 11.2rem;
+}
+
+.order_item_end_title {
+  max-width: 11.2rem;
+  min-width: 4rem;
+}
+
+.order_item_used_title {
+  max-width: 11.2rem;
+  min-width: 4rem;
+}
+
+.order_item_account_title {
+  max-width: 6rem;
+  min-width: 4rem;
+  border-radius: 0 0 0 8px;
+}
+
+.order_item_stuff_title {
+  max-width: 11.2rem;
+  min-width: 4rem;
+}
+
+.order_item_manager_title {
+  max-width: 11.2rem;
+  min-width: 4rem;
+}
+
+.order_item_stufflist_title {
+  max-width: 11.2rem;
+  min-width: 4rem;
+}
+
+.orderlist_second_line {
+  display: flex;
+  width: 100%;
+}
+
+.order_index input {
+  width: 100%;
+  max-width: 12rem;
+  height: 3.6rem;
+  font-size: 1.4rem;
+  border: 1px solid #dfdfdf;
+  border-radius: 4px;
+}
+
+.order_index select {
+  width: 100%;
+  max-width: 12rem;
+  height: 3.6rem;
+  font-size: 1.4rem;
+  border: 1px solid #dfdfdf;
+  border-radius: 4px;
+}
+
+.order_item_end_index label {
+  display: flex;
+  align-items: center;
+  font-size: 1.6rem;
+  width: 100%;
+}
+
+.btn_plus {
+  width: 3.6rem;
+  height: 3.6rem;
+}
+
+.btn_search {
+  width: 3.6rem;
+  height: 3.6rem;
+}
+
+.order_item_used_index {
+  border-radius: 0 8px 0 0;
+}
+
+.order_index_stufflist {
+  border-radius: 0 0 8px 0;
+}
+
+.order_item_od_index input {
+  width: 100%;
+  max-width: 100px;
+}
+
+/* 목록 테이블 카테고리 */
+
+/* 스크롤바 삭제 */
+
+.table_data::-webkit-scrollbar {
+  display: none;
+}
+
+.orderlist_index_wrap::-webkit-scrollbar {
+  display: none;
+}
+
+/* 총액 표기 */
+
+.data_total_01 {
+  display: flex;
+  width: 100%;
+}
+
+.data_total_01 > div {
+  display: flex;
+  background-color: #f8fbff;
+  border-right: 1px solid #d3d3d3;
+  padding: 1.2rem 0;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+}
+
+.data_total_01 .total_blank_01 {
+  width: 100%;
+  max-width: 5.6rem;
+}
+
+.data_total_01 .total_all_01 {
+  width: 100%;
+  max-width: 39rem;
+}
+
+.data_total_01 .total_all_02 {
+  width: 100%;
+  max-width: 56.6rem;
+}
+
+.data_total_01 .total_all_money {
+  width: 100%;
+  max-width: 10.6rem;
+  min-width: 10.6rem;
+}
+
+.data_total_01 .total_all_03 {
+  width: 100%;
+  max-width: 39.6rem;
+}
+
+.data_total_02 {
+  width: 100%;
+  text-align: right;
+  padding: 1.2rem 1.6rem;
+  background-color: #f8fbff;
+  border: 1px solid #d3d3d3;
+  border-left: 0px solid transparent;
+  font-size: 1.6rem;
+}
+
+.orderlist_detail_wrap {
+  width: 100%;
+  margin-top: 4.8rem;
+  font-size: 1.6rem;
+}
+
+.orderlist_detail_cate {
+  display: flex;
+}
+
+.orderlist_detail_cate > div {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.order_li_check {
+  width: 100%;
+  max-width: 5.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.detail_blank {
+  width: 100%;
+  max-width: 5.6rem;
+  padding: 1.2rem 0;
+}
+
+.detail_index {
+  width: 100%;
+  max-width: 41.5rem;
+}
+
+.index_dt {
+  width: 100%;
+  padding: 1.2rem 0;
+  border-right: none;
+}
+
+.code_dt {
+  width: 25%;
+  min-width: 6rem;
+  padding: 1.2rem 0;
+  border-bottom: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.name_dt {
+  width: 25%;
+  min-width: 6rem;
+  padding: 1.2rem 0;
+  border-bottom: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.size_dt {
+  width: 25%;
+  min-width: 6rem;
+  padding: 1.2rem 0;
+  border-bottom: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.unit_dt {
+  width: 25%;
+  min-width: 6rem;
+  padding: 1.2rem 0;
+  border-right: none;
+  border-bottom: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.due_dt {
+  width: 100%;
+  max-width: 10.6rem;
+  padding: 1.2rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.expected_dt {
+  width: 100%;
+  max-width: 13.4rem;
+  padding: 1.2rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.detail_index > div:nth-of-type(2) {
+  display: flex;
+}
+
+.detail_coin {
+  width: 100%;
+  max-width: 52.1rem;
+}
+
+.coin_dt {
+  padding: 1.2rem 0;
+  border-right: none;
+}
+
+.quantity_dt {
+  width: 20%;
+  min-width: 6rem;
+  padding: 1.2rem 0;
+  border-bottom: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.price_dt {
+  width: 20%;
+  padding: 1.2rem 0;
+  min-width: 6rem;
+  border-bottom: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.supply_dt {
+  width: 20%;
+  padding: 1.2rem 0;
+  min-width: 6rem;
+  border-bottom: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.vat_dt {
+  width: 20%;
+  padding: 1.2rem 0;
+  min-width: 6rem;
+  border-bottom: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.total_dt {
+  width: 20%;
+  padding: 1.2rem 0;
+  min-width: 6rem;
+  border-right: none;
+  border-bottom: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.detail_coin > div:nth-of-type(2) {
+  display: flex;
+}
+
+.advice_dt {
+  width: 100%;
+  max-width: 8.4rem;
+  padding: 1.2rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.detail_blank_02 {
+  width: 100%;
+  max-width: 12.5rem;
+  padding: 1.2rem 0;
+}
+
+.orderlist_detail_index {
+  display: flex;
+}
+
+.orderlist_detail_index .detail_index {
+  display: flex;
+}
+
+.orderlist_detail_index .detail_coin {
+  display: flex;
+}
+
+.orderlist_index_wrap {
+  height: 14rem;
+  background-color: #fff;
+  overflow: scroll;
+  width: 100%;
+  border-bottom: 1px solid #dfdfdf;
+  border-right: 1px solid #dfdfdf;
+}
+
+.detail_blank_02.radius {
+  border-radius: 0rem 1.2rem 0rem 0rem;
+}
+
+.detail_blank.radius {
+  border-radius: 1.2rem 0rem 0rem 0rem;
+}
+
+.orderlsit_detail_total {
+  display: flex;
+}
+
+.detail_total_blank {
+  width: 100%;
+  max-width: 5.6rem;
+}
+
+.detail_total_01 {
+  width: 100%;
+  max-width: 65.4rem;
+  padding: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.total_count_wrap {
+  display: flex;
+  width: 100%;
+}
+
+.detail_total_blank_02 {
+  width: 28.9rem;
+}
+
+.total_count_wrap {
+  width: 100%;
+  max-width: 52rem;
+}
+
+.detail_total_count_01 {
+  width: 20%;
+  min-width: 6rem;
+  padding: 1.2rem 0.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.detail_total_count_02 {
+  width: 20%;
+  min-width: 6rem;
+  padding: 1.2rem 0.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.detail_total_count_03 {
+  width: 20%;
+  min-width: 6rem;
+  padding: 1.2rem 0.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.detail_total_count_04 {
+  width: 20%;
+  min-width: 6rem;
+  padding: 1.2rem 0.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.detail_total_count_05 {
+  width: 21%;
+  min-width: 6rem;
+  padding: 1.2rem 0.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.detail_total_02 {
+  padding: 1.2rem 1.6rem;
+  text-align: right;
+}
+
+.orderlist_modal {
+  width: 100%;
+  max-width: 1126px;
+  background-color: #fff;
+  border-radius: 8px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 5.4rem;
+  z-index: 9999;
+  display: none;
+}
+
+.orderlist_modal.on {
+  display: block;
+}
+
+.background_black.on {
+  display: block;
+}
+
+.orderlist_modal_title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.6rem;
+}
+
+.modal_btn {
+  display: flex;
+  gap: 8px;
+}
+
+.modal_btn button {
+  padding: 0.6rem 1.6rem;
+  font-size: 1.6rem;
+  background-color: #46698f;
+  border-radius: 4px;
+  color: #fff;
+}
+.xbtn img {
+  cursor: pointer;
+  margin-left: 2rem;
+}
+
+.cate_wrap_01 {
+  display: flex;
+  border-bottom: 1px solid #eaeaea;
+  font-size: 1.4rem;
+}
+
+.cate_wrap_02 {
+  display: flex;
+  margin-top: 1.6rem;
+  font-size: 1.4rem;
+}
+
+.cate_wrap_03 {
+  width: 100%;
+  display: flex;
+  /* border-right: 1px solid #eaeaea; */
+  border-bottom: 1px solid #eaeaea;
+  font-size: 1.4rem;
+}
+
+.modal_title {
+  width: 30%;
+  border: 1px solid #eaeaea;
+  border-right: 0px solid #eaeaea;
+  border-bottom: 0px solid #eaeaea;
+  padding: 0.8rem 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal_cate {
+  display: flex;
+  width: 50%;
+}
+
+.modal_index {
+  width: 70%;
+  border: 1px solid #eaeaea;
+  padding: 0.8rem 1.2rem;
+  border-right: 0px solid #eaeaea;
+  border-bottom: 0px solid #eaeaea;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.modal_index input {
+  width: 50%;
+  padding: 1.2rem 0;
+  background-color: #f5f3f3;
+  border: none;
+  border-radius: 8px;
+}
+
+.modal_index select {
+  width: 50%;
+  padding: 1.2rem 0;
+  background-color: #f5f3f3;
+  border: none;
+  border-radius: 8px;
+}
+
+.modal_detail_title {
+  display: flex;
+  align-items: center;
+}
+.modal_detail_title img {
+  width: 1.6rem;
+  margin-right: 0.8rem;
+}
+
+.modal_detail_title p {
+  font-size: 1.6rem;
+}
+
+.modal_detail_chart {
+  display: flex;
+  justify-content: space-between;
+  margin: 2.8rem 0 2.4rem;
+}
+
+.chart_button {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.chart_button button {
+  padding: 0.6rem 1.2rem;
+  border-radius: 4px;
+  background-color: #a1bbd6;
+  font-size: 1.4rem;
+  color: #fff;
+}
+
+.ch_cate {
+  display: flex;
+  font-size: 1.6rem;
+}
+
+.ch_cate > div {
+  border-top: 1px solid #dfdfdf;
+}
+
+.ch_info_wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.ch_info {
+  display: flex;
+}
+
+.ch_infomation {
+  padding: 1.2rem 0;
+  border-bottom: 1px solid #dfdfdf;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ch_money_wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.ch_coin {
+  display: flex;
+}
+
+.ch_blank {
+  width: 100%;
+  max-width: 4.4rem;
+  padding: 1.2rem 0;
+}
+
+.ch_blank_02 {
+  width: 100%;
+  max-width: 4.4rem;
+  padding: 1.2rem 0;
+  border-left: 1px solid #dfdfdf;
+  border-radius: 1.2rem 0rem 0rem 0rem;
+}
+
+.ch_info_wrap {
+  width: 100%;
+  max-width: 32.8rem;
+}
+
+.ch_info > div {
+  width: 33.3%;
+  padding: 1.2rem 0;
+  border-bottom: 0px solid #dfdfdf;
+  text-align: center;
+}
+
+.ch_info > div:nth-of-type(3) {
+  border-right: 0px solid #dfdfdf;
+}
+
+.ch_date {
+  width: 100%;
+  max-width: 8.5rem;
+  padding: 1.2rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.ch_go {
+  width: 100%;
+  max-width: 10.5rem;
+  padding: 1.2rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.ch_money_wrap {
+  width: 100%;
+  max-width: 40.9rem;
+}
+
+.ch_money {
+  width: 100%;
+  padding: 1.2rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ch_coin > div {
+  width: 20%;
+  padding: 1.2rem 0;
+  border-bottom: 0px solid #dfdfdf;
+  text-align: center;
+}
+
+.ch_reference {
+  width: 100%;
+  max-width: 7.4rem;
+  padding: 1.2rem 0;
+  border-right: 1px solid #dfdfdf;
+  border-bottom: 1px solid #dfdfdf;
+  border-radius: 0rem 1.2rem 0rem 0rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ch_total_price {
+  border-right: 0px solid #dfdfdf;
+}
+
+.ch_index {
+  width: 100%;
+  border: 1px solid #dfdfdf;
+  height: 12rem;
+}
+
+.ch_blank_03 {
+  width: 100%;
+  max-width: 4.4rem;
+  height: 12rem;
+  border-right: 1px solid #dfdfdf;
+}
+
+/* 백그라운드_모달 */
+
+.background_black {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 99;
+  top: 0;
+  left: 0;
+  display: none;
+}
+
+/* 돋보기 클릭시 뜨는 모달창 => 거래처 찾기 */
+.customer_modal_title,
+.item_modal_title,
+.personInCharge_modal_title {
+  padding: 0 0 2rem;
+  border-bottom: 1px solid #ddd;
+}
+.customer_modal_title h3,
+.item_modal_title h3,
+.personInCharge_modal_title h3 {
+  font-size: 2.8rem;
+  font-weight: 700;
+}
+.customer_search,
+.item_search,
+.personInCharge_search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5rem 0 15rem;
+  color: #3e4551;
+}
+.customer_search input,
+.item_search input,
+.personInCharge_search input {
+  border: 1px solid #ddd;
+  padding: 0.8rem;
+  width: 50%;
+  font-size: 1.6rem;
+}
+.customer_search img,
+.item_search img,
+.personInCharge_search img {
+  margin-left: 2rem;
+}
+.customer_content,
+.item_content,
+.personInCharge_content {
+  width: 60%;
+  border-bottom: 2px solid #5178ff;
+  padding-bottom: 2rem;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.customer_btn,
+.item_btn,
+.personInCharge_btn {
+  margin-top: 4rem;
+  border-top: 1px solid #ddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.customer_btn button,
+.item_btn button,
+.personInCharge_btn button {
+  font-size: 2rem;
+  margin: 4rem 10rem 0;
+  font-weight: 600;
+}
+.customer_btn button.customer_select,
+.item_btn button.item_select,
+.personInCharge_btn button.personInCharge_select {
+  color: #5178ff;
+}
+
+/* 생산관리- 생산라인목록 */
+
+.line_wrap {
+  display: flex;
+  gap: 4rem;
+}
+
+.index_list_wrap {
+  width: 100%;
+  display: flex;
+}
+
+.line_item {
+  width: 100%;
+  height: 300px;
+  padding: 2.4rem 2.4rem;
+  background-color: #fff;
+  box-shadow: 0px 4px 25px 0px rgba(171, 180, 193, 0.25);
+  border-radius: 0.8rem;
+}
+
+.line_item_txt_wrap {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4rem;
+}
+
+.line_item_txt {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 2rem;
+  gap: 0.4rem;
+}
+
+.line {
+  display: flex;
+  flex-direction: column;
+}
+
+.line_btn {
+  gap: 4px;
+}
+
+.line_bar {
+  width: 100%;
+  height: 4px;
+  background-color: #edf4ff;
+  position: relative;
+}
+
+.line_item .line_bar::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 50%;
+  height: 4px;
+  background-color: #ff3434;
+}
+
+.line_item.second .line_bar::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 80%;
+  height: 4px;
+  background-color: #ff3434;
+}
+
+.line_item.third .line_bar::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background-color: #5fe3a1;
+}
+
+.line_txt {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.6rem;
+  margin-top: 0.8rem;
+}
+
+.line_txt p:nth-of-type(2) {
+  color: #ff3434;
+  font-weight: 600;
+}
+
+.line_txt p:nth-of-type(2).green {
+  color: #5fe3a1;
+  font-weight: 600;
+}
+
+.line_btn button {
+  padding: 0.6rem 1.2rem;
+  font-weight: 600;
+  color: #fff;
+  background: #95b8ea;
+  border-radius: 0.4rem;
+}
+
+/* 수정 버튼 클릭시 모달창 추가 */
+/* .line_btn a {
+  padding: 0.6rem 1.2rem;
+  font-weight: 600;
+  color: #fff;
+  background: #95b8ea;
+  border-radius: 0.4rem;
+} */
+/* 수정 버튼 클릭시 뜨는 모달창 내용 스타일 추가 */
+/* #overlay {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  display: none;
+} */
+
+/* #modal {
+  width: 112.6rem;
+  height: 64.3rem;
+  background: #fff;
+  border-radius: 10px;
+  padding: 4.8rem;
+  margin-bottom: 3rem;
+  overflow: hidden;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 11;
+  display: none;
+} */
+
+/* #modal span {
+  font-size: 1.8em;
+  cursor: pointer;
+} */
+
+/* .madal_header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+} */
+/* .madal_header h3 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #333;
+} */
+/* .btn_madal_header {
+  display: flex;
+} */
+/* .btn_madal_header button {
+  background: #46698f;
+  color: #fff;
+  font-size: 1.8rem;
+  border-radius: 0.4rem;
+  padding: 0.6rem 1.2rem;
+  margin-right: 1.6rem;
+} */
+
+/* 할당 업무 */
+
+.index_list {
+  width: 100%;
+}
+
+.idx_item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.8rem;
+  font-size: 1.6rem;
+  text-align: center;
+}
+
+.idx_item p:nth-of-type(1) {
+  padding: 0.5rem 2.3rem;
+  border-radius: 6.2rem;
+  background: #557cfe;
+  color: #fff;
+  font-weight: 600;
+}
+
+.line_chart_wrap {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.line_chart_item {
+  width: 49%;
+  height: 280px;
+  padding: 4rem 4rem;
+  border-radius: 0.8rem;
+  background: #fff;
+  box-shadow: 0px 4px 25px 0px rgba(171, 180, 193, 0.25);
+}
+
+.line_chart_item h3 {
+  margin-bottom: 5.6rem;
+}
+
+/* 라인 모달 */
+
+.modal_cate_mk {
+  display: flex;
+}
+
+.mk_item_list {
+  width: 70%;
+}
+
+.mk_item {
+  display: flex;
+}
+
+.modal_index_mk {
+  width: 70%;
+  padding: 0.6rem 1.2rem;
+  border-right: 1px solid #dfdfdf;
+  border-top: 1px solid #dfdfdf;
+}
+
+.modal_index_mk select {
+  width: 50%;
+  padding: 1.2rem 0;
+  background-color: #f5f3f3;
+  border: none;
+  border-radius: 8px;
+}
+.modal_index_mk_02 select {
+  width: 50%;
+  padding: 1.2rem 0;
+  background-color: #f5f3f3;
+  border: none;
+  border-radius: 8px;
+}
+
+.number_ea {
+  display: flex;
+  width: 30%;
+  padding: 0.6rem;
+  border-top: 1px solid #dfdfdf;
+  align-items: center;
+}
+
+.number_ea input {
+  width: 4rem;
+}
+
+.mk_title {
+  width: 30%;
+  border: 1px solid #dfdfdf;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal_cate_mk {
+  width: 100%;
+}
+
+.item_workevent {
+  padding: 0.6rem 1.2rem;
+  border-right: 1px solid #dfdfdf;
+}
+.item_workevent.work_02 {
+  padding: 0;
+  border-right: none;
+}
+
+.modal_index {
+  border-right: 1px solid #dfdfdf;
+}
+
+.orderlist_member_del {
+  display: inline-block;
+  background-color: #a1bbd6;
+  color: #fff;
+  margin-bottom: 0.4rem;
+}
+.orderlist_member_del p {
+  display: inline-block;
+  padding: 0.4rem;
+}
+
+.orderlist_member_del button {
+  color: #fff;
+  margin: 0 0.8rem 0 0.4rem;
+  font-size: 1.2rem;
+}
+
+.orderlist_company_del {
+  display: inline-block;
+  background-color: #a1bbd6;
+  color: #fff;
+  margin-bottom: 0.4rem;
+}
+
+.orderlist_company_del p {
+  display: inline-block;
+  padding: 0.4rem;
+}
+
+.orderlist_company_del button {
+  color: #fff;
+  margin: 0 0.8rem 0 0.4rem;
+  font-size: 1.2rem;
+}
+
+.modal_cate_mk.member .mk_item {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  padding: 0.6rem 1.2rem;
+  border: 1px solid #dfdfdf;
+}
+
+.modal_index_mk_02 {
+  width: 100%;
+  margin-bottom: 0.4rem;
+}
+
+.top_item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.4rem;
+}
+
+.top_item > div {
+  width: 49%;
+}
+
+.mk_item_02 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.mk_item_02 > div {
+  display: flex;
+  font-size: 1.4rem;
+}
+
+.idx_mk_title {
+  width: 30%;
+  border: 1px solid #dfdfdf;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.idx_mk_detail {
+  width: 70%;
+}
+
+.idx_mk_detail > div {
+  border: 0.5px solid #dfdfdf;
+}
+
+.idx_mk_detail > div p {
+  padding: 0.8rem 1.2rem;
+}
+
+.idx_mk_detail > div a {
+  padding: 0.8rem 1.2rem;
+  display: block;
+}
+
+.mk_flex {
+  display: flex;
+}
+
+.mk_flex p {
+  width: 50%;
+}
+
+.mk_flex p:nth-of-type(1) {
+  background-color: #f0f0f0;
+}
+
+/* 모달 _ 아래쪽 */
+
+.bottom_item {
+  width: 100%;
+  margin-top: 2.4rem;
+}
+
+.now_work {
+  width: 100%;
+  padding: 1.6rem 0;
+  font-size: 1.6rem;
+  text-align: center;
+  border: 1px solid #e4e4e4;
+}
+
+.btm_item_wrap {
+  display: flex;
+  text-align: center;
+  border: 1px solid #e4e4e4;
+  font-size: 1.4rem;
+}
+
+.btm_item:nth-of-type(1) {
+  width: 100%;
+  max-width: 23.2rem;
+}
+.btm_item:nth-of-type(2) {
+  width: 100%;
+  max-width: 38rem;
+}
+.btm_item:nth-of-type(3) {
+  width: 100%;
+  max-width: 42.3rem;
+}
+
+.btm_item div:nth-of-type(1) {
+  padding: 1.6rem 0;
+  background-color: #f0f0f0;
+  border: 1px solid #e4e4e4;
+  border-top: none;
+}
+.btm_item div:nth-of-type(2) {
+  padding: 1.6rem 0;
+  border: 1px solid #e4e4e4;
+  border-top: none;
+}
+
+/* 캘린더 크기 수정 */
+/* .dashboard .calendar,
+.dashboard .calendar div {
+  height: 80%;
+} */
+
+.month {
+  width: 100%;
+  display: flex;
+}
+
+.month.week p {
+  height: auto;
+  font-size: 2rem;
+}
+
+.month p {
+  width: 100%;
+  max-width: 21.7rem;
+  height: 13rem;
+  border: 0.5px solid #e7e7e7;
+  padding: 1.6rem;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  font-size: 1.6rem;
+  background-color: #fff;
+  position: relative;
+}
+
+.month p.blank_month {
+  background-color: #f9f9fb;
+}
+
+.schedule {
+  position: absolute;
+  top: 10%;
+  display: block;
+  padding: 0.8rem 2.2rem;
+  background-color: #7f79f9;
+  color: #fff;
+  border-radius: 0.4rem;
+}
+
+.schedule.purple {
+  background-color: #7f79f9;
+}
+.schedule.red {
+  background-color: #ff8373;
+}
+
+.date_picker {
+  display: flex;
+  align-items: center;
+  font-size: 3.2rem;
+  gap: 1.2rem;
+  font-weight: 600;
+}
+
+@media (max-width: 1560px) {
+  .order_item_od_index {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .order_item_od_index span {
+    display: none;
+  }
+
+  .order_item_end_index {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .orderlist_detail_index {
+    font-size: 1.2rem;
+  }
+
+  .orderlist_detail_wrap {
+    font-size: 1.4rem;
+  }
+
+  .table_list {
+    font-size: 1.2rem;
+  }
+
+  .data_total_01 > div {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 1280px) {
+  .order_index {
+    flex-direction: column;
+  }
+
+  .order_item_index select {
+    width: 100%;
+  }
+
+  .order_item_com {
+    min-width: 6rem;
+  }
+
+  /* .order_item_od_title {
+    max-width: 8rem;
+  } */
+
+  .table_list > div {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .data_total_01 > div {
+    font-size: 1.2rem;
+  }
+
+  .data_total_02 {
+    font-size: 1.2rem;
+  }
+
+  .idx_item p:nth-of-type(1) {
+    font-size: 1.2rem;
+    padding: 0.6rem 1.6rem;
+  }
+
+  .line_item_txt {
+    flex-direction: column;
+  }
+
+  .schedule {
+    font-size: 1.2rem;
+  }
+}
+
+/* 1번라인 수정 모달 */
+.orderlist_modal1 {
+  width: 100%;
+  max-width: 1126px;
+  background-color: #fff;
+  border-radius: 8px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 5.4rem;
+  z-index: 9999;
+  display: none;
+}
+.orderlist_modal1.on,
+.background_black1.on {
+  display: block;
+}
+.background_black1 {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 99;
+  top: 0;
+  left: 0;
+  display: none;
+}
+.xbtn1 img {
+  cursor: pointer;
+  margin-left: 2rem;
+}
+
+/* 2번라인 수정 모달 */
+.orderlist_modal2 {
+  width: 100%;
+  max-width: 1126px;
+  background-color: #fff;
+  border-radius: 8px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 5.4rem;
+  z-index: 9999;
+  display: none;
+}
+.orderlist_modal2.on,
+.background_black2.on {
+  display: block;
+}
+.background_black2 {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 99;
+  top: 0;
+  left: 0;
+  display: none;
+}
+.xbtn2 img {
+  cursor: pointer;
+  margin-left: 2rem;
+}
+
+/* 3번라인 수정 모달 */
+.orderlist_modal3 {
+  width: 100%;
+  max-width: 1126px;
+  background-color: #fff;
+  border-radius: 8px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 5.4rem;
+  z-index: 9999;
+  display: none;
+}
+.orderlist_modal3.on,
+.background_black3.on {
+  display: block;
+}
+.background_black3 {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 99;
+  top: 0;
+  left: 0;
+  display: none;
+}
+.xbtn3 img {
+  cursor: pointer;
+  margin-left: 2rem;
+}
+/* date => 일정 추가 btn 모달 내용 */
+.schedule_modal_title {
+  padding: 0 0 2rem;
+  border-bottom: 1px solid #ddd;
+}
+.schedule_modal_title h3 {
+  font-size: 2.8rem;
+  font-weight: 700;
+}
+.schedule_info input:focus,
+input:active,
+button:focus,
+button:active {
+  outline: none;
+  box-shadow: none;
+}
+.schedule_title {
+  display: flex;
+  align-items: center;
+  font-size: 1.6rem;
+  color: #3e4551;
+  margin: 2rem 0;
+}
+.schedule_title span {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-right: 2.8rem;
+}
+.schedule_info input,
+.schedule_date input,
+.schedule_content input {
+  border: 1px solid #ddd;
+  padding: 0.8rem;
+  width: 100%;
+  max-width: 60%;
+  font-size: 1.6rem;
+}
+.schedule_title ::placeholder,
+.schedule_content::placeholder {
+  color: #3e4551;
+}
+.schedule_date {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.schedule_date p {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-right: 6.8rem;
+}
+.schedule_date span {
+  font-size: 2rem;
+  margin: 0 1.2rem;
+}
+.schedule_date_input {
+  display: flex;
+  align-items: center;
+  width: 50%;
+}
+.schedule_content {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.schedule_content p {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-right: 6.8rem;
+}
+
+/* 스케쥴 일정 추가 & 수정 & 삭제 btn */
+.schedule_btn {
+  margin-top: 4rem;
+  border-top: 1px solid #ddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.schedule_btn button {
+  font-size: 2rem;
+  margin: 4rem 10rem 0;
+  font-weight: 600;
+}
+.schedule_save {
+  color: #5178ff;
+}
+
+.date_button {
+  position: absolute;
+  bottom: 2.4rem;
+  right: 2.4rem;
+  display: grid;
+  gap: 1.2rem;
+  z-index: 1;
+}
+.date_button img {
+  width: 90%;
+}
+
+.schedule_add,
+.schedule_modify,
+.customer_modal,
+.item_modal,
+.personInCharge_modal {
+  width: 100%;
+  max-width: 1126px;
+  background-color: #fff;
+  border-radius: 8px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 5.4rem;
+  z-index: 9999;
+  display: none;
+}
+
+.schedule_add.on,
+.schedule_modify.on,
+.customer_modal.on,
+.item_modal.on,
+.personInCharge_modal.on {
+  display: block;
+}
+/* orderlist 테이블 CSS */
+.orderpage_list,
+.orderpage_detail {
+  width: 100%;
+  max-height: 100%;
+}
+.orderpage_list_title,
+.orderpage_detail_title {
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.2rem;
+}
+.orderpage_list_title img,
+.orderpage_detail_title img {
+  width: 1.6rem;
+  margin-right: 0.8rem;
+}
+.orderpage_list_title p,
+.orderpage_detail_title p {
+  font-size: 1.6rem;
+  letter-spacing: -0.4px;
+  color: #333;
+}
+
+/* orderlist 테이블 CSS => 테이블  */
+.orderpage_list_table {
+  width: 100%;
+  max-width: 100%;
+  height: 27rem;
+  overflow-y: scroll;
+  margin-bottom: 1.6rem;
+  border-radius: 10px 10px 0 0;
+  filter: drop-shadow(0px 4px 25px rgba(171, 180, 193, 0.25));
+  -ms-overflow-style: none;
+}
+/* 스크롤 기능은 살리고 스크롤바는 없애기  */
+.orderpage_list_table::-webkit-scrollbar {
+  display: none;
+}
+
+table.orderpage_list_table_wrapper {
+  width: 100%;
+  max-width: 100%;
+  background: #fff;
+  text-align: center;
+  font-size: 1.6rem;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  color: #4e4e4e;
+  width: 100%;
+  max-width: 100%;
+  overflow-y: scroll;
+}
+
+/* orderlist 테이블 CSS => 테이블thead  */
+.orderpage_list_table thead {
+  width: 100%;
+  max-height: 100%;
+  height: 4rem;
+  background: #fff;
+  position: sticky;
+  top: 0;
+  border-bottom: 1px solid #d3d3d3;
+}
+.orderpage_list_table th {
+  border-right: 1px solid #d3d3d3;
+  border-bottom: 1px solid #d3d3d3;
+}
+.orderpage_list_table th:nth-child(17) {
+  border-right: none;
+}
+
+/* orderlist 테이블 CSS => 테이블tbody  */
+.orderpage_list_table_wrapper tbody {
+  width: 100%;
+  /* height: 20rem; */
+  table-layout: fixed;
+  border-collapse: collapse;
+  overflow-y: scroll;
+}
+
+.orderpage_list_table_wrapper tbody tr {
+  width: 100%;
+}
+.orderpage_list_table_wrapper tbody::-webkit-scrollbar {
+  width: 10px;
+}
+.orderpage_list_table_wrapper tbody tr td {
+  border-bottom: 1px solid #d3d3d3;
+  border-right: 1px solid #d3d3d3;
+  padding: 0 0.8rem;
+}
+
+.order_table_input {
+  width: 3%;
+}
+.order_table_no {
+  width: 3%;
+}
+.order_table_blank {
+  width: 2%;
+}
+.order_table_factory {
+  width: 4%;
+}
+.order_table_company {
+  width: 6%;
+}
+.order_table_statement {
+  width: 10%;
+}
+.order_table_ver {
+  width: 4%;
+}
+.order_table_condition {
+  width: 5%;
+}
+.order_table_customer {
+  width: 6%;
+}
+.order_table_registerDate {
+  width: 8%;
+}
+.order_table_type {
+  width: 6%;
+}
+.order_table_charge {
+  width: 7%;
+}
+.order_table_total {
+  width: 8%;
+}
+.order_table_creationDate {
+  width: 12%;
+}
+.order_table_creator {
+  width: 5%;
+}
+.order_table_correctionDate {
+  width: 6%;
+}
+.order_table_amender {
+  width: 5%;
+  border-right: none;
+}
+
+.orderpage_list_table tbody {
+  width: 100%;
+  max-width: 100%;
+  /* height: 4rem; */
+  /* overflow: scroll; */
+}
+.orderpage_list_table tbody tr {
+  width: 100%;
+  max-width: 100%;
+  height: 3.6rem;
+}
+.orderpage_list_table tbody td img {
+  margin: 0 auto;
+}
+.orderpage_list_table tbody tr td:nth-child(17) {
+  border-right: none;
+}
+
+.orderpage_list_table tfoot {
+  width: 100%;
+  background: #f8fbff;
+  position: sticky;
+  bottom: 0;
+}
+.orderpage_list_table tfoot tr {
+  width: 100%;
+  max-width: 100%;
+  height: 4rem;
+  padding: 0 1.2rem;
+}
+.orderpage_list_table tfoot tr td {
+  border-right: 1px solid #d3d3d3;
+  border-bottom: 1px solid #d3d3d3;
+}
+
+.list_total {
+  text-align: right;
+  padding: 0 2rem 0 0;
+}
+.orderpage_list_table tfoot tr td:nth-child(6) {
+  border-right: none;
+}
+
+.orderpage_list_table tfoot tr:nth-child(2) td {
+  border-right: none;
+}
+
+/* orderdetail 테이블 CSS */
+/* orderdetail 테이블 CSS => 테이블  */
+.orderpage_detail_table {
+  width: 100%;
+  max-width: 100%;
+  height: 27rem;
+  border-radius: 10px 10px 0 0;
+  filter: drop-shadow(0px 4px 25px rgba(171, 180, 193, 0.25));
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+}
+
+/* 스크롤 기능은 살리고 스크롤바는 없애기  */
+.orderpage_detail_table::-webkit-scrollbar {
+  display: none;
+}
+
+table.orderpage_detail_table_wrapper {
+  width: 100%;
+  max-width: 100%;
+  background: #fff;
+  filter: drop-shadow(0px 4px 25px rgba(171, 180, 193, 0.25));
+  text-align: center;
+  font-size: 1.6rem;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  color: #4e4e4e;
+  width: 100%;
+  max-width: 100%;
+  overflow-y: scroll;
+}
+
+/* orderlist 테이블 CSS => 테이블thead  */
+.orderpage_detail_table thead {
+  width: 100%;
+  max-height: 100%;
+  height: 4rem;
+  background: #fff;
+  position: sticky;
+  top: 0;
+}
+.orderpage_detail_table th {
+  border-right: 1px solid #d3d3d3;
+  border-bottom: 1px solid #d3d3d3;
+  height: 4rem;
+}
+
+/* thead의 width */
+.orderpage_detail_table_wrapper .orderpage_detail_tr_top th:nth-child(7) {
+  width: 7rem;
+}
+.orderpage_detail_table_wrapper .orderpage_detail_tr_top th:nth-child(8) {
+  width: 14rem;
+  border-right: none;
+}
+
+/* orderlist 테이블 CSS => 테이블tbody  */
+.orderpage_detail_table_wrapper tbody {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  overflow-y: scroll;
+}
+
+.orderpage_detail_table_wrapper tbody tr {
+  width: 100%;
+  height: 3rem;
+}
+.orderpage_detail_table_wrapper tbody tr td {
+  border-bottom: 1px solid #d3d3d3;
+  border-right: 1px solid #d3d3d3;
+  padding: 0 0.8rem;
+}
+.orderpage_detail_table_wrapper tbody tr td:nth-child(15) {
+  border-right: none;
+}
+
+.orderpage_detail_table tbody {
+  width: 100%;
+  max-width: 100%;
+  /* height: 4rem; */
+  /* overflow: scroll; */
+}
+.orderpage_detail_table tbody tr {
+  width: 100%;
+  max-width: 100%;
+  height: 3.6rem;
+}
+.orderpage_detail_table tbody td img {
+  margin: 0 auto;
+}
+.orderpage_detail_table tbody tr td:nth-child(17) {
+  border-right: none;
+}
+
+.orderpage_detail_table tfoot {
+  width: 100%;
+  background: #f8fbff;
+  position: sticky;
+  bottom: 0;
+}
+.orderpage_detail_table tfoot tr {
+  width: 100%;
+  max-width: 100%;
+  height: 4rem;
+  padding: 0 1.2rem;
+}
+.orderpage_detail_table tfoot tr td {
+  border-right: 1px solid #d3d3d3;
+  border-bottom: 1px solid #d3d3d3;
+}
+
+.list_total {
+  text-align: right;
+  padding: 0 2rem 0 0;
+}
+
+.orderpage_detail_table tfoot tr:nth-child(2) td {
+  border-right: none;
+}
+
+.content_total {
+  text-align: right;
+  padding-right: 2rem;
+}

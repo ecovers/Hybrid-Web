@@ -1,0 +1,241 @@
+/* 스크롤 문제로 사용 */
+/* body {
+  overflow-y: hidden;
+} */
+
+.dashboard {
+  margin-left: 18rem;
+}
+
+/* 메인 1열 */
+
+.dashboard_line1 {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.5rem;
+}
+.line1_tab,
+.line2_tab,
+.line3_tab {
+  border: 1px solid red;
+  padding: 2rem 3rem;
+  border-radius: 1.6rem;
+  border: 1px solid #a4b9fc;
+  background: #fff;
+  box-shadow: 0px 4px 25px 0px rgba(171, 180, 193, 0.25);
+
+}
+.line1_tab {
+  padding: 1.5rem 3rem 0;
+}
+
+.line1_tab.today_output {
+  width: 100%;
+  max-width: 90rem;
+  margin-right: 3.2rem;
+}
+
+.line1_tab.date {
+  width: 100%;
+  max-width: 90rem;
+}
+
+.output_list {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.6rem;
+  font-size: 1.2rem;
+}
+
+.output_item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 1.2rem;
+  background: #d6e4f3;
+  box-shadow: 0px 4px 25px 0px #fbf7f4;
+  width: 20%;
+  padding: 1.6rem 0.5rem;
+}
+
+.output_item p {
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+}
+
+.today_output_title h3 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #3e4551;
+}
+
+.today_output_title p {
+  font-size: 1.6rem;
+  color: #3e4551;
+  display: flex;
+  justify-content: space-between;
+  margin: 1.6rem 0 2.4rem 0;
+}
+
+.date_title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #3e4551;
+  margin-bottom: 1.2rem;
+}
+
+.date_list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.date_item {
+  display: flex;
+  width: 48%;
+  justify-content: space-between;
+  padding: 1.2rem 2rem;
+  background: #d6e4f3;
+  border-radius: 1.2rem;
+  font-size: 1.6rem;
+  margin-bottom: 1.2rem;
+  align-items: center;
+}
+
+.date_item > div {
+  color: #fff;
+  border-radius: 1.2rem;
+  background: #a0bad6;
+  padding: 0.6rem 2.2rem;
+  font-size: 1.4rem;
+}
+
+/* 메인 2열 */
+
+.dashboard_line2 {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.5rem;
+}
+
+.line2_tab {
+  width: 100%;
+  max-width: 65rem;
+  margin-right: 3.2rem;
+}
+.line1_tab h3,
+.line2_tab h3,
+.line3_tab h3 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 2.4rem;
+  color: #3e4551;
+}
+.line1_tab h3 {
+  margin-bottom: 2rem;
+}
+
+.line2_tab div {
+  width: 100%;
+}
+.line2_tab img {
+  width: 100%;
+  height: 16rem;
+  object-fit: contain;
+}
+
+.line2_tab:last-of-type {
+  margin-right: 0;
+}
+
+/* 메인 3열 */
+
+.dashboard_line3 {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.5rem;
+
+}
+
+.line3_tab {
+  width: 100%;
+}
+.line3_tab div {
+  width: 100%;
+}
+.line3_tab img {
+  width: 100%;
+  
+  object-fit: contain;
+}
+
+.line3_tab.sell {
+  margin-right: 3.2rem;
+}
+
+.line3_tab h3 {
+  margin-bottom: 1.6rem;
+}
+
+@media (max-width: 1280px) {
+  .line1_tab {
+    padding: 1.6rem;
+  }
+
+  .today_output_title h3 {
+    font-size: 1.6rem;
+  }
+
+  .date_title {
+    font-size: 1.6rem;
+  }
+
+  .line1_tab.date {
+    max-width: 30rem;
+  }
+
+  .output_list {
+    font-size: 1.4rem;
+    flex-wrap: wrap;
+  }
+
+  .date_item {
+    width: 100%;
+  }
+
+  .date_item:nth-of-type(4) {
+    display: none;
+  }
+
+  .output_item {
+    width: 48%;
+    padding: 0.8rem 1.6rem;
+  }
+
+  .dashboard {
+    padding: 1.6rem 2.4rem;
+  }
+
+  .today_output_title p {
+    font-size: 1.2rem;
+  }
+
+  h3 {
+    font-size: 1.6rem;
+  }
+}
+
+/* 2000x1200 화면에 대한 스타일 */
+@media screen and (min-width: 2000px) and (min-height: 1200px) {
+  .dashboard h2 {
+    margin-bottom: 0rem;
+  }
+
+  .dashboard_line2 {
+    margin-top: 5.6rem;
+  }
+  .dashboard_line3 {
+    margin-top: 5.6rem;
+  }
+} 

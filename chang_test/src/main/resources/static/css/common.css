@@ -1,0 +1,396 @@
+@charset "utf-8";
+
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "KIMM_Bold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2212@1.0/KIMM_Bold.woff2")
+    format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+section {
+  display: flex;
+}
+
+.dashboard h2 {
+  font-size: 2.4rem;
+  margin-bottom: 2.4rem;
+}
+
+h3 {
+  font-weight: 700;
+  color: #3e4551;
+  font-size: 2.4rem;
+}
+
+* {
+  font-family: "SUIT-Regular";
+  box-sizing: border-box;
+}
+
+/* layout */
+
+html,
+body {
+  font-size: 10px;
+  font-weight: 300;
+}
+
+body {
+  background-color: #f1f8ff;
+}
+
+.pc {
+  display: block;
+}
+
+.mobile {
+  display: none;
+}
+
+/* margin 값 */
+
+.mg_top {
+  margin-top: 8rem;
+}
+
+.mg_left {
+  margin-left: 18rem;
+}
+
+.board_pad {
+  padding: 1rem;
+  width: 100%;
+}
+
+/* header */
+
+header {
+  width: 100%;
+  padding: 2rem 5.2rem 2rem 9.2rem;
+  background-color: #ffffff;
+  position: fixed;
+  z-index: 9;
+}
+
+.header_wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hd_icon {
+  display: flex;
+  align-items: center;
+}
+
+.hd_icon .people {
+  margin-left: 1.4rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.header_wrap p {
+  font-family: 'Dongle', sans-serif;
+  font-size: 3.4rem;
+}
+
+/* 알람 모달 */
+.alarm {
+  z-index: 100;
+  position: relative;
+  top: 8rem;
+  right: 9rem;
+  height: auto;
+  background: #ffffff;
+  border-radius: 5px;
+  border: #d6e4f3 solid 2px;
+  border-radius: 10px;
+  position: absolute;
+  font-size: 1.6rem;
+  text-align: left;
+  display: none;
+}
+.alarm:after {
+  content: "";
+  position: absolute;
+  border-style: solid;
+  border-width: 0 9px 15px 9px;
+  border-color: #ffffff transparent;
+  display: block;
+  width: 0;
+  z-index: 1;
+  top: -1.5rem;
+  right: 3.3rem;
+}
+
+.alarm:before {
+  content: "";
+  position: absolute;
+  border-style: solid;
+  border-width: 0 12px 18px 12px;
+  border-color: #d6e4f3 transparent;
+  display: block;
+  width: 0;
+  z-index: 0;
+  top: -1.8rem;
+  right: 3rem;
+}
+.modal_content {
+  padding: 2rem 2rem 0 2rem;
+}
+.modal_content h3 {
+  font-size: 1.8rem;
+  padding-bottom: 1.2rem;
+  color: #333;
+}
+.alarm-modal_contents {
+  border-top: 1px solid #eaeaea;
+  padding: 1.6rem 0;
+  display: flex;
+  align-items: center;
+}
+.alarm-modal_contents span {
+  font-size: 1.4rem;
+  font-weight: 600;
+  padding-right: 2.4rem;
+}
+/* .alarm-modal_contents span::before {
+  content: "";
+  display: inline-block;
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: 50%;
+  background: #4a75f4;
+  vertical-align: middle;
+  margin-right: 0.8rem;
+}
+.modal_content a:nth-child(3) span::before {
+  background: #ff3b4f;
+} */
+.alarm-modal_contents div {
+  font-size: 2rem;
+  padding-right: 2rem;
+  text-align: left;
+}
+.alarm-modal_contents div strong {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+.alarm-modal_contents div p {
+  font-family: "Pretendard-Regular";
+  color: #b8b8b8;
+  font-size: 1.2rem;
+  padding-top: 0.4rem;
+}
+
+button.alarm_contents_bt_text {
+  width: 100%;
+  font-family: "Pretendard-Regular";
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-align: center;
+  border-top: 1px solid #eaeaea;
+  padding: 1.2rem 0;
+}
+.read {
+  color: #d7d7d7;
+  opacity: 0.8;
+}
+.ico_dot.read {
+  background: #d7d7d7;
+}
+.modal_content_text.read {
+  color: #d7d7d7;
+}
+.ico_dot {
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: 50%;
+  margin-right: 0.8rem;
+}
+.dot_color_red {
+  background: #ff3b4f;
+}
+.dot_color_blue {
+  background: #4a75f4;
+}
+
+/* 아코디언 메뉴 */
+
+.nav_wrap {
+  width: 100%;
+  height: 100%;
+  max-width: 18rem;
+  overflow: hidden;
+  background-color: #fff;
+  position: fixed;
+}
+
+.menu_wrap {
+  width: 100%;
+  max-width: 24rem;
+  height: 100%;
+}
+
+.menu li:first-child {
+  border-top: 0;
+}
+
+/* 아코디언 - 대메뉴 */
+
+.menu li a {
+  width: 100%;
+  display: block;
+  text-decoration: none;
+  color: #000;
+  font-size: 1.5rem;
+  padding: 1.4rem 0 1.4rem 2rem;
+  display: flex;
+  align-items: center;
+  gap: 2.4rem;
+  background-color: #ffffff;
+  color: #8f949b;
+}
+
+/* 대메뉴 배경 컬러 */
+
+.menu li a.on {
+  background-color: #f1f8ff;
+  color: #1e2b3d;
+}
+
+.menu li div {
+  color: #555;
+  display: none;
+  line-height: 2;
+}
+
+.menu li div p {
+  width: 100%;
+  padding: -2rem 6rem 0.8rem 0;
+  font-size: 1.6rem;
+  text-align: center;
+}
+.menu li div p.active {
+  /* background-color: #fcf6f5ff; */
+  color: #314e69;
+  font-weight: 700;
+}
+
+.index {
+  padding-top: 7.3rem;
+}
+
+.index_img {
+  margin-bottom: 1.6rem;
+  margin-top: 3.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.index_txt {
+  margin-bottom: 0.6rem;
+  text-align: center;
+}
+
+.index_txt h2 {
+  font-size: 2.4rem;
+  font-weight: 600;
+}
+
+.index_txt p {
+  font-size: 1.6rem;
+}
+
+.index_txt_btn {
+  margin-top: 1.6rem;
+  margin-bottom: 3.2rem;
+}
+
+.index_txt_btn button {
+  padding: 0.8rem 2.2rem;
+  font-size: 1.6rem;
+  color: #4e4e4e;
+  border: 1px solid #a0bad6;
+  border-radius: 16px;
+}
+
+.dashboard {
+  margin-top: 8rem;
+  padding: 1rem 1rem;
+  width: 100%;
+}
+
+@media (max-width: 1280px) {
+  .board_pad {
+    padding: 1.6rem 3.2rem;
+  }
+
+  .header_wrap p {
+    font-size: 1.6rem;
+  }
+
+  .index_img {
+    margin-top: 1.6rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    max-width: 6rem;
+  }
+
+  .index_img img {
+    width: 100%;
+  }
+
+  .index {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .index_txt h2 {
+    font-size: 1.6rem;
+  }
+
+  .index_txt p {
+    font-size: 1.2rem;
+  }
+
+  .index_txt_btn button {
+    padding: 0.6rem 1.6rem;
+    font-size: 1.2rem;
+  }
+
+  .index_txt_btn {
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+  }
+
+  .menu li a {
+    font-size: 1.4rem;
+  }
+
+  .menu li a span:nth-of-type(1) {
+    width: 100%;
+    max-width: 1.2rem;
+  }
+
+  .menu li a span img {
+    width: 100%;
+  }
+}
+
+.filter-orange{
+  filter: invert(46%) sepia(98%) saturate(493%) hue-rotate(333deg) brightness(94%) contrast(94%);
+}

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>웹캠 스트림</title>
+</head>
+<body>
+    <video id="videoElement" autoplay></video>
+
+    <script>
+        const videoElement = document.getElementById('videoElement');
+
+        // 웹소켓 서버에 연결
+        const socket = new WebSocket('ws://localhost:9000');
+
+        // 웹소켓 메시지 수신
+        socket.onmessage = event => {
+            const data = event.data;
+
+            // 수신한 데이터를 비디오 요소에 표시
+            videoElement.src = URL.createObjectURL(new Blob([data], { type: 'image/jpeg' }));
+        };
+    </script>
+</body>
+</html>
