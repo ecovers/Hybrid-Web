@@ -289,12 +289,11 @@ function callAjax(){
      /*       MainDTO asd =   */
            		%>
             <tr>
-              <td class="border px-4 py-2" id="name<%=i+1 %>" style="border: 1px solid #333; padding: 8px;"><%=main.get(i).getD_name() %>
-              </td>
-              <td class="border px-4 py-2" id="location<%=i+1 %>" style="border: 1px solid #333; padding: 8px;"><%=main.get(i).getLocation() %></td>
-              <td class="border px-4 py-2" id="ea<%=i+1 %>" style="border: 1px solid #333; padding: 8px;"><%=main.get(i).getEa() %></td>
-              <td class="border px-4 py-2" id="size<%=i+1 %>" style="border: 1px solid #333; padding: 8px;"><%=main.get(i).getSize() %></td>
-              <td class="border px-4 py-2" id="time<%=i+1 %>" style="border: 1px solid #333; padding: 8px;"><%=main.get(i).getId() %>
+              <td class="border px-4 py-2" id="name<%=i+1 %>" style="border: 1px solid #333; padding: 8px;"><%=main.get(i).getAI_pdt_name() %></td>
+              <td class="border px-4 py-2" id="location<%=i+1 %>" style="border: 1px solid #333; padding: 8px;"><%=main.get(i).getAI_pdt_size() %></td>
+              <td class="border px-4 py-2" id="ea<%=i+1 %>" style="border: 1px solid #333; padding: 8px;"><%=main.get(i).getAI_factory_name() %></td>
+              <td class="border px-4 py-2" id="size<%=i+1 %>" style="border: 1px solid #333; padding: 8px;"><%=main.get(i).getAI_line_num() %></td>
+              <td class="border px-4 py-2" id="time<%=i+1 %>" style="border: 1px solid #333; padding: 8px;"><%=main.get(i).getAI_date() %>
               </td>
             </tr>
           <%  }  %>

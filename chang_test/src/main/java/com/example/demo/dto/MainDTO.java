@@ -18,11 +18,11 @@ import lombok.ToString;
 
 public class MainDTO {
 
-	private int id;
-	private String d_name;
-	private String location;
-	private String size;
-	private String ea;
-	private String data_time;
+	private int AI_id;
+	private String AI_pdt_name;
+	private String AI_pdt_size;
+	private String AI_factory_name;
+	private String AI_line_num;
+	private String AI_date;
 	
 }
