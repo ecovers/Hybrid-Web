@@ -8,13 +8,15 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.example.demo.dto.MainDTO;
+import com.example.demo.dto.MakelineDTO;
+import com.example.demo.dto.MakepdtDTO;
 import com.example.demo.dto.MemberDTO;
 import com.example.demo.mapper.MainMapper;
 
 import jakarta.servlet.http.HttpSession;
 
 
-
+//메인 기능담당 back 단 각 url을 호출했을 시 어떤기능을하고 어떤 페이지로 이동할지 결정한다.
 
 @Controller
 public class HomeController {
@@ -44,7 +46,22 @@ public class HomeController {
 	}
 	
 	@RequestMapping(value = "/makeline")
-	public String makeline() {
+	public String makeline(HttpSession session) {
+		
+		List<MakelineDTO> make = mainMapper.Makeline();
+		List<MakepdtDTO> makePdt = mainMapper.Makepdt();
+		
+		int lineNum = mainMapper.lineNum();
+		
+		
+		
+		System.out.println(lineNum);
+		
+		
+		
+		session.setAttribute("pdt", makePdt);
+		session.setAttribute("make", make);
+		
 		return "makeline";
 	}
 	

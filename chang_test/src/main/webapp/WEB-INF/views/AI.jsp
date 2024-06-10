@@ -4,6 +4,8 @@
 <%@page import="com.example.demo.dto.MainDTO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
+    
+    <!-- 자바처럼 해당 페이지 구성에 필요한 메소드들을 import로 불러오는 모습 보통 ctrl+space를 누르면 자동으로 불러와진다. -->
 <!DOCTYPE html>
 <html lang="ko">
 
@@ -19,6 +21,9 @@
   <script src="js/common.js" defer></script>
   <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	
+	
+	<!-- 자바 스크립트 단 -->
   <script>
     function confirmLogout() {
       if (confirm("로그아웃하시겠습니까?")) {
@@ -30,47 +35,43 @@
 <script type="text/javascript">
 
 let check_dic = {"성공" : "연결됨"};
-<%SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");%>
+/* 날짜 포맷을 변경하기 위한 java  호출 */
+<%SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss"); %>
 
-
+/* 실시간 html 갱신을 위한 Ajax 함수 */
 function callAjax(){		
 		$.ajax({
-		  type : 'post',
-   		  url : 'http://192.168.50.51:5000/',
+		  type : 'post', /* 포스트타입으로 */
+   		  url : 'http://192.168.50.51:5000/', /* 목표 아이피와 통신 여기선  python:Flask - DB와 통신 */
 /*		  url : 'AI.jsp', */
 /*    		  url : 'http://221.144.59.244:5000/' */
-		  data : check_dic,
-		  dataType : 'json',
-		  success : function(res) {
+		  data : check_dic, /* check_dic을 보낸다 */
+		  dataType : 'json', /* json 타입으로 */
+		  success : function(res) { /* 통신 성공 했을 시 실행 함수 */
 				var count = res['count'];
-				//var chartNum = res['chart'];	
-/* 				alert(count); */
-				//var box1 = count[0];
-				
-			
+				/* 받아온 값으로 html 값을 즉시 수정한다 - 실시간 값 변경 */
 				<%for (int i = 0; i < 10; i++) {%>
 				var Name<%=i + 1%> = count[<%=i%>][1];
 				var location<%=i + 1%> = count[<%=i%>][2];
 				var size<%=i + 1%> = count[<%=i%>][3];
 				var ea<%=i + 1%> = count[<%=i%>][4];
 				var date<%=i + 1%> = count[<%=i%>][0];
-				
+				/* 각 id 값을 기준으로 값 갱신 */
 				document.getElementById("name<%=i + 1%>").innerHTML = Name<%=i + 1%>;
 				document.getElementById("location<%=i + 1%>").innerHTML = location<%=i + 1%>;
 				document.getElementById("ea<%=i + 1%>").innerHTML = ea<%=i + 1%>;
 				document.getElementById("size<%=i + 1%>").innerHTML = size<%=i + 1%>;
 				document.getElementById("time<%=i + 1%>").innerHTML = date<%=i + 1%>;
 				<%}%>
-				//alert("야호");
-				
+
 				
 		},
-		error : function() {
-			//alert('요청 실패쓰');
+		error : function() { 
+
 		}
 		})
 	}
-	setInterval(callAjax, 1000)
+	setInterval(callAjax, 1000) /* 밀리초 단위 딜레이(1초 지연) */
 	callAjax()
 	;
 </script>
@@ -284,8 +285,11 @@ function callAjax(){
             </tr>
           </thead>
           <tbody>
+          
+          
+          <!-- 백단에서 올린 세션을 불러와 main변수에 담음 --> 
           <%List<MainDTO> main = (List<MainDTO>)session.getAttribute("AI"); %>
-           <%for (int i = 0; i < main.size(); i++){  
+           <%for (int i = 0; i < main.size(); i++){ /* 포문을 열어 html을 세션의 길이만큼 반복 */  
      /*       MainDTO asd =   */
            		%>
             <tr>
@@ -296,7 +300,7 @@ function callAjax(){
               <td class="border px-4 py-2" id="time<%=i+1 %>" style="border: 1px solid #333; padding: 8px;"><%=main.get(i).getAI_date() %>
               </td>
             </tr>
-          <%  }  %>
+          <%  }  %> <!-- 포문 닫기 -->
      	  
             
 
@@ -305,7 +309,7 @@ function callAjax(){
         </table>
         
       </div>
-      
+      <!-- (구)rtsp 주소 갱신 버튼 및 함수 -->
       <input type="text" id="newSrc" placeholder="새로운 src 값을 입력하세요">
       <button onclick="changeSrc()">수정하기</button>
 		<script>

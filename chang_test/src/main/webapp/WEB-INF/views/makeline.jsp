@@ -1,3 +1,8 @@
+<%@page import="com.example.demo.dto.MakepdtDTO"%>
+<%@page import="java.text.SimpleDateFormat"%>
+<%@page import="java.util.List"%>
+<%@page import="com.example.demo.dto.MakelineDTO"%>
+
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
@@ -198,6 +203,12 @@
         </div>
       </div>
       <div class="line_wrap">
+      
+          <%List<MakelineDTO> Make = (List<MakelineDTO>)session.getAttribute("make"); %>
+          <%List<MakepdtDTO> pdt = (List<MakepdtDTO>)session.getAttribute("pdt"); %>
+          <%int linenum = (Integer)session.getAttribute("linenum"); %>
+      
+		<% for (int i = 0; i < pdt.size(); i++){ %>
         <div class="line_item">
           <div class="line_item_txt_wrap">
             <div>
@@ -218,27 +229,34 @@
             </div>
             <div><img src="./img/img_ongoling.png" alt="" /></div>
           </div>
+          
+
+          
+          
           <div class="index_list_wrap">
             <ul class="index_list">
               <li class="idx_item">
-                <p>할당 업무</p>
-                <p>가방 100개, 신발 50개</p>
+                <p>할당 업무</p> <!-- #첫번째 할당업무 #ㄸㅉ##################################### -->
+                <p><%=Make.get(0).getLive_total_pdt_name() %></p>
               </li>
               <li class="idx_item">
                 <p>생산 기간</p>
-                <p>2023.01.01 ~01.06</p>
+                <p><%=pdt.get(0).getMake_pdt_start_date() %> ~ <%=pdt.get(0).getMake_pdt_end_date() %></p>
               </li>
               <li class="idx_item">
                 <p>그룹 멤버</p>
-                <p>김철수, 하철수, 박철수</p>
+                <p><%=pdt.get(0).getMake_pdt_name() %></p>
               </li>
               <li class="idx_item">
                 <p>중요 사항</p>
-                <p>할당 업무</p>
+                <p><%=pdt.get(0).getMake_pdt_note() %></p>
               </li>
             </ul>
           </div>
         </div>
+        
+        <% } %>
+        
         <div class="line_item second">
           <div class="line_item_txt_wrap">
             <div>
@@ -263,7 +281,7 @@
             <ul class="index_list">
               <li class="idx_item">
                 <p>할당 업무</p>
-                <p>가방 100개, 신발 50개</p>
+                <p><% %></p> <!-- 두번째 할당업무 ################################################## -->
               </li>
               <li class="idx_item">
                 <p>생산 기간</p>
