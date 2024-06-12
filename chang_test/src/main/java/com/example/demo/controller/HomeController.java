@@ -18,17 +18,18 @@ import jakarta.servlet.http.HttpSession;
 
 //메인 기능담당 back 단 각 url을 호출했을 시 어떤기능을하고 어떤 페이지로 이동할지 결정한다.
 
+// 스프링 Controller 지정
 @Controller
 public class HomeController {
 	
-	@Autowired
+	@Autowired // 의존성 주입 
 	MainMapper mainMapper;
 	
-	@GetMapping
+	@GetMapping // get 형식으로 통신 
 	public String home() {
 		return "main";
 	}
-	
+//	url지정해서 main으로 이동했을때 동작
 	@RequestMapping(value = "/main")
 	public String main() {
 		return "main";
