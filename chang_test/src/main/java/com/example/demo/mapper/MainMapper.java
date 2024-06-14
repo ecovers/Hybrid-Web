@@ -23,7 +23,9 @@ import com.example.demo.dto.MemberDTO;
 @Mapper
 
 public interface MainMapper {
-
+	
+	
+	
 	@Select("SELECT * FROM ai_quantity_check order by AI_id desc limit 10")
 	List<MainDTO> AIdata();
 	

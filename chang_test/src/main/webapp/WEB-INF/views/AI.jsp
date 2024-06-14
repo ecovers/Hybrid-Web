@@ -31,7 +31,7 @@
       }
     }
   </script>
-  
+
 <script type="text/javascript">
 
 let check_dic = {"¼º°ø" : "¿¬°áµÊ"};
